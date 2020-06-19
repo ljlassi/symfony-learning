@@ -1,0 +1,14 @@
+{%  extends "base.html.twig" %}
+{% block title %}
+    Add product
+{% endblock %}
+{% block body %}
+    <h2 class="pt-5 pb-3">Add product</h2>
+    <form action="{{ path('create_product') }}" method="post">
+        <label for="product_name_input">Product name</label>
+            <input type="text" name="product_name" id="product_name_input">
+        <label for="product_price_input">Product price</label>
+        <input type="number" name="product_price" id="product_price_input">
+        <input type="submit" value="Add product">
+    </form>
+{%  endblock %}
