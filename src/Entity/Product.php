@@ -41,24 +41,45 @@ class Product
 
     private $price;
 
+    /**
+     * @return int
+     */
 
     public function getId() :int {
         return $this->id;
     }
 
+    /**
+     * @return string
+     */
+
     public function getName() :string {
         return $this->name;
     }
 
+    /**
+     * @return int
+     */
+
     public function getPrice() :int {
         return $this->getPrice();
     }
+
+    /**
+     * @param string $name
+     * @return $this
+     */
 
 
     public function setName(string $name) : self {
         $this->name = $name;
         return $this;
     }
+
+    /**
+     * @param int $price
+     * @return $this
+     */
 
     public function setPrice(int $price) : self {
         $this->price = $price;

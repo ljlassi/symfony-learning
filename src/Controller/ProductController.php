@@ -17,8 +17,9 @@ class ProductController
     /**
      * @Route("/create/product", name="create_product")
      *
+     * @param EntityManagerInterface $entityManager
      *
-     * @return String
+     * @return Response
      */
 
     public function createProduct(EntityManagerInterface $entityManager) : Response {
@@ -42,7 +43,12 @@ class ProductController
     /**
      * @Route("/new/product", name="new_product")
      *
-     * @return String
+     * @param Environment $twig
+     *
+     * @return Response
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
      */
 
     public function createProductForm(Environment $twig) : Response {

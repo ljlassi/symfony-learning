@@ -14,7 +14,11 @@ class HomeController
     /**
      * @Route("/", name="index.php")
      *
-     * @return string
+     * @param Environment $twig
+     * @return Response
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
      */
 
     public function homepage(Environment $twig) {
