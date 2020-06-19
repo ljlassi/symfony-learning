@@ -10,6 +10,13 @@ use Twig\Environment;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 
+/**
+ * Class ProductController
+ * @package App\Controller
+ *
+ * Controller for Product related actions.
+ *
+ */
 
 class ProductController
 {

@@ -10,6 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @package App\Entity
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  *
+ * Entity class for a product, using ORM to handle database.
+ *
  */
 
 
