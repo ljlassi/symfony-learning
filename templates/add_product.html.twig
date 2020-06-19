@@ -1,9 +1,11 @@
+{# Template for add products page, extends base template. #}
 {%  extends "base.html.twig" %}
 {% block title %}
     Add product
 {% endblock %}
 {% block body %}
     <h2 class="pt-5 pb-3">Add product</h2>
+    {# Simple form for adding a product, to be prossesed by controller set as action. Automatically find correct path. #}
     <form action="{{ path('create_product') }}" method="post">
         <label for="product_name_input">Product name</label>
             <input type="text" name="product_name" id="product_name_input">
