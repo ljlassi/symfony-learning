@@ -64,7 +64,7 @@ class Product
      */
 
     public function getPrice() :int {
-        return $this->getPrice();
+        return $this->price;
     }
 
     /**
