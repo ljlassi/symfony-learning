@@ -22,6 +22,18 @@ class ProductController
 {
 
     /**
+     * @Route("/list/all/products", name="list_products")
+     *
+     * @param EntityManagerInterface
+     *
+     * @Return Response
+     */
+
+    public function listAllProducts(EntityManagerInterface $entityManager) {
+
+    }
+
+    /**
      * @Route("/create/product", name="create_product")
      *
      * @param EntityManagerInterface $entityManager
