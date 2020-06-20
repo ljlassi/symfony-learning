@@ -19,7 +19,11 @@ class HomeControllerTest extends WebTestCase
     public function testHomepage() {
         $client = static::createClient();
         $client->request('GET', '/');
+
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $crawler = $client->request('GET', '/');
+        $this->assertSelectorTextContains('html h2#add_product_h2', 'Add product');
+
     }
 
 
