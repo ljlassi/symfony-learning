@@ -24,6 +24,7 @@ class ProductController
     /**
      * @Route("/list/all/products", name="list_products")
      *
+     * @param EntityManagerInterface $entityManager
      * @param Environment $twig
      * @return Response
      *
@@ -33,8 +34,8 @@ class ProductController
      * @throws \Twig\Error\SyntaxError
      */
 
-    public function listAllProducts(Environment $twig) {
-        $products = $this->getDoctrine()-getRepository(Product::class)->findAll();
+    public function listAllProducts(EntityManagerInterface $entityManager, Environment $twig) : Response {
+        $products = $entityManager->getRepository(Product::class)->findAll();
 
         return new Response($twig->render("list_products.html.twig", ['products' => $products]));
     }
