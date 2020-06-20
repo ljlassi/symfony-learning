@@ -25,12 +25,17 @@ class ProductController
      * @Route("/list/all/products", name="list_products")
      *
      * @param EntityManagerInterface
+     * @param Environment
      *
-     * @Return Response
+     * @return Response
+     *
+     * get all products from repository, render the view with the array
      */
 
-    public function listAllProducts(EntityManagerInterface $entityManager) {
+    public function listAllProducts(EntityManagerInterface $entityManager, Enviroment $twig) {
+        $products = $this->getDoctrine()-getRepository(Product::class)->findAll();
 
+        return new Response($twig->render("list_products.html.twig", ['products' => $products]));
     }
 
     /**

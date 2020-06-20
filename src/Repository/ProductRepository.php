@@ -18,9 +18,22 @@ use Doctrine\Persistence\ManagerRegistry;
 class ProductRepository extends ServiceEntityRepository
 {
 
+    /**
+     * ProductRepository constructor.
+     * @param ManagerRegistry $registry
+     */
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Product::class);
+    }
+
+    public function findAll() : array {
+
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery('SELECT p FROM App\Entity\Product p');
+        return $query->getResult();
+
     }
 
 }
