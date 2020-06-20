@@ -4,9 +4,13 @@ Products listing
 {% endblock %}
 {% block body %}
 
-    {% for product in products %}
-    {{ loop.index }} - {{ product.name }}
-    {{ loop.index }} - {{ product.price }}
-    {% endfor %}
+    <table class="table">
+        {% for product in products %}
+            <tr>
+                <td>Product: {{ product.name }}</td>
+                <td>Product price:{{ product.price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 
 {%  endblock %}
