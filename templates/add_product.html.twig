@@ -7,10 +7,16 @@
     <h2 class="pt-5 pb-3">Add product</h2>
     {# Simple form for adding a product, to be prossesed by controller set as action. Automatically find correct path. #}
     <form action="{{ path('create_product') }}" method="post">
+        <div class="form-group">
         <label for="product_name_input">Product name</label>
-            <input type="text" name="product_name" id="product_name_input">
+            <input type="text" class="form-control" name="product_name" id="product_name_input">
+        </div>
+        <div class="form-group">
         <label for="product_price_input">Product price</label>
-        <input type="number" name="product_price" id="product_price_input">
-        <input type="submit" value="Add product">
+        <input type="number" class="form-control"  name="product_price" id="product_price_input">
+        </div>
+        <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Add product">
+        </div>
     </form>
 {%  endblock %}
