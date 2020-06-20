@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block title %}
+Products listing
+{% endblock %}
+{% block body %}
+
+    {% for product in products %}
+    {{ loop.index }} - {{ product.name }}
+    {{ loop.index }} - {{ product.price }}
+    {% endfor %}
+
+{%  endblock %}
