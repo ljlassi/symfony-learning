@@ -7,6 +7,9 @@
     <h2 class="text-center pb-2">Add product</h2>
     <p class="text-center">
         {# Automatically add correct path to link that directs to new product page #}
-    <a href="{{ path('new_product') }}">Link to add product page</a>
+        <a href="{{ path('list_products') }}">Link to products listing</a>
+    </p>
+    <p class="text-center">
+        <a href="{{ path('new_product') }}">Link to add product page</a>
     </p>
 {%  endblock %}
