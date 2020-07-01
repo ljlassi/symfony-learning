@@ -16,6 +16,10 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 class HomeControllerTest extends WebTestCase
 {
 
+    /**
+     * Response test for homepage, first test http response and then whether html is correct.
+     */
+
     public function testHomepage() {
         $client = static::createClient();
         $client->request('GET', '/');
