@@ -20,7 +20,7 @@ class HomeControllerTest extends WebTestCase
      * Response test for homepage, first test http response and then whether html is correct.
      */
 
-    public function testHomepage() {
+    public function testHomepage() : void {
         $client = static::createClient();
         $client->request('GET', '/');
 
