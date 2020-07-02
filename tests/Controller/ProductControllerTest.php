@@ -19,7 +19,7 @@ class ProductControllerTest extends WebTestCase
     }
 
     /**
-     * THIS TEST FAILS, gives null for some reason, I'm working on it.
+     * THIS TEST FAILS, gives null for product name for some reason, I'm working on it.
      */
 
     public function testCreateProduct() : void {
@@ -31,8 +31,6 @@ class ProductControllerTest extends WebTestCase
         $form = $crawler->selectButton('add_product_submit')->form();
         $form['product_name'] = 'test_product';
         $form['product_price'] = '100';
-
-// submit that form
         $crawler = $client->submit($form);
 
         $response = $client->getResponse()->getStatusCode();
