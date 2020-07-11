@@ -28,10 +28,11 @@ class ProductControllerTest extends WebTestCase
 
         //$crawler = $client->submitForm('add_product_submit', ['product_name' => 'test_product', 'product_price' => 100]);
 
-        $form = $crawler->selectButton('add_product_submit')->form();
-        $form['product_name'] = 'test_product';
-        $form['product_price'] = '100';
-        $crawler = $client->submit($form);
+        $buttonCrawlerNode = $crawler->selectButton('add_product_submit');
+        $form = $buttonCrawlerNode->form();
+        $form['product_name'] = 'testproduct';
+        $form['product_price'] = 100;
+        $client->submit($form);
 
         $response = $client->getResponse()->getStatusCode();
         $this->assertEquals(200, $response);
