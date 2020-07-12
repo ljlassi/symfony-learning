@@ -66,7 +66,7 @@ class ProductController
 
     }
 
-    /**
+    /*/**
      * @Route("/new/product", name="new_product")
      *
      * @param Environment $twig
@@ -77,8 +77,8 @@ class ProductController
      * @throws \Twig\Error\SyntaxError
      */
 
-    public function createProductForm(Environment $twig) : Response {
+    /*public function createProductForm(Environment $twig) : Response {
         return new Response($twig->render("/add_product.html.twig", []));
-    }
+    } */
 
 }
