@@ -31,6 +31,7 @@ class ProductFormController extends AbstractController
         $form = $this->createFormBuilder($product_form);
         $form->add('id', TextType::class);
         $form->add('name', TextType::class);
+        $form->add('price', TextType::class);
         $form->add('submit', SubmitType::class);
         $form_ready = $form->getForm();
 
